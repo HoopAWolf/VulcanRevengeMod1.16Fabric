@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "vrm",
+  "version": "${version}",
+
+  "name": "Vulcan's Revenge Plus+ Mod",
+  "description": "A mod which adds in vulcan's sword and other mythical stuff",
+  "authors": [
+    "Pauljoda(creator), HoopAWolf"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/vrm/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.hoopawolf.vrm.VulcanRevengeMod"
+    ],
+    "modmenu": [
+      "com.hoopawolf.vrm.config.ModMenuConfig"
+    ],
+    "client": [
+      "com.hoopawolf.vrm.proxy.ClientProxy"
+    ]
+  },
+  "mixins": [
+    "vrm.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

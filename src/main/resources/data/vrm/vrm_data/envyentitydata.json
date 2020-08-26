@@ -1,0 +1,560 @@
+[
+  {
+    "entityID": "minecraft:bat",
+    "amplifier": 0,
+    "listOfEffects": [
+      "vrm:flighteffect",
+      "vrm:echolocationeffect",
+      "minecraft:night_vision"
+    ]
+  },
+  {
+    "entityID": "minecraft:blaze",
+    "amplifier": 0,
+    "listOfEffects": [
+      "vrm:flighteffect",
+      "vrm:flamechargeeffect",
+      "minecraft:slow_falling",
+      "minecraft:fire_resistance"
+    ]
+  },
+  {
+    "entityID": "minecraft:cow",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "vrm:milkeffect"
+    ]
+  },
+  {
+    "entityID": "vrm:slothpet",
+    "amplifier": 0,
+    "listOfEffects": [
+      "vrm:sleepeffect",
+      "vrm:flighteffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:cod",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:water_breathing",
+      "vrm:swimmingspeedeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:cow",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "vrm:milkeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:chicken",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:slow_falling",
+      "vrm:eggattackeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:creeper",
+    "amplifier": 0,
+    "listOfEffects": [
+      "vrm:explosiveresisteffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:dolphin",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:water_breathing",
+      "vrm:swimmingspeedeffect",
+      "minecraft:dolphins_grace"
+    ]
+  },
+  {
+    "entityID": "minecraft:donkey",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:jump_boost",
+      "minecraft:speed"
+    ]
+  },
+  {
+    "entityID": "minecraft:drowned",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:water_breathing",
+      "vrm:hungerresisteffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:elder_guardian",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:water_breathing",
+      "minecraft:speed",
+      "minecraft:haste",
+      "vrm:swimmingspeedeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:ender_dragon",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "minecraft:regeneration",
+      "minecraft:resistance",
+      "vrm:flighteffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:enderman",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:night_vision",
+      "vrm:teleportationeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:endermite",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:night_vision",
+      "vrm:teleportationeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:evoker",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "vrm:evokeeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:fox",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:speed",
+      "minecraft:luck",
+      "vrm:fallresisteffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:ghast",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:fire_resistance",
+      "vrm:flighteffect",
+      "vrm:explosiveresisteffect",
+      "vrm:explosivefirechargeeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:giant",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "vrm:hungerresisteffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:guardian",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:water_breathing",
+      "vrm:swimmingspeedeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:hoglin",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "minecraft:resistance"
+    ]
+  },
+  {
+    "entityID": "minecraft:horse",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:jump_boost",
+      "minecraft:speed"
+    ]
+  },
+  {
+    "entityID": "minecraft:husk",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "vrm:hungerresisteffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:ravager",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "minecraft:hero_of_the_village"
+    ]
+  },
+  {
+    "entityID": "minecraft:illusioner",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:invisibility",
+      "vrm:teleportationeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:killer_bunny",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "minecraft:speed",
+      "minecraft:jump_boost"
+    ]
+  },
+  {
+    "entityID": "minecraft:llama",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "minecraft:saturation"
+    ]
+  },
+  {
+    "entityID": "minecraft:magma_cube",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:jump_boost",
+      "minecraft:fire_resistance",
+      "vrm:fallresisteffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:mooshroom",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "vrm:steweffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:mule",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:jump_boost",
+      "minecraft:speed"
+    ]
+  },
+  {
+    "entityID": "minecraft:ocelot",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:jump_boost",
+      "minecraft:speed",
+      "vrm:fallresisteffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:panda",
+    "amplifier": 0,
+    "listOfEffects": [
+      "vrm:hungerresisteffect",
+      "vrm:sleepeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:parrot",
+    "amplifier": 0,
+    "listOfEffects": [
+      "vrm:flighteffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:phantom",
+    "amplifier": 0,
+    "listOfEffects": [
+      "vrm:flighteffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:pig",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:regeneration"
+    ]
+  },
+  {
+    "entityID": "minecraft:piglin",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "vrm:regeneration"
+    ]
+  },
+  {
+    "entityID": "minecraft:pillager",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "minecraft:hero_of_the_village"
+    ]
+  },
+  {
+    "entityID": "minecraft:player",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "minecraft:hero_of_the_village"
+    ]
+  },
+  {
+    "entityID": "minecraft:polar_bear",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "vrm:absorption"
+    ]
+  },
+  {
+    "entityID": "minecraft:pufferfish",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:water_breathing",
+      "vrm:swimmingspeedeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:rabbit",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:speed",
+      "minecraft:jump_boost"
+    ]
+  },
+  {
+    "entityID": "minecraft:salmon",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:water_breathing",
+      "vrm:swimmingspeedeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:sheep",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:absorption"
+    ]
+  },
+  {
+    "entityID": "minecraft:shulker",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:resistance"
+    ]
+  },
+  {
+    "entityID": "minecraft:silverfish",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:haste"
+    ]
+  },
+  {
+    "entityID": "minecraft:squid",
+    "amplifier": 0,
+    "listOfEffects": [
+      "vrm:inkeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:skeleton",
+    "amplifier": 0,
+    "listOfEffects": [
+      "vrm:arrowattackeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:skeleton_horse",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:speed",
+      "minecraft:jump_boost"
+    ]
+  },
+  {
+    "entityID": "minecraft:snow_golem",
+    "amplifier": 0,
+    "listOfEffects": [
+      "vrm:frostwalkeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:spider",
+    "amplifier": 0,
+    "listOfEffects": [
+      "vrm:climbeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:slime",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:jump_boost",
+      "vrm:fallresisteffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:stray",
+    "amplifier": 0,
+    "listOfEffects": [
+      "vrm:arrowattackeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:strider",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:water_breathing",
+      "vrm:swimmingspeedeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:trader_llama",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "minecraft:saturation"
+    ]
+  },
+  {
+    "entityID": "minecraft:tropical_fish",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:water_breathing",
+      "vrm:swimmingspeedeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:turtle",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:water_breathing",
+      "vrm:swimmingspeedeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:vex",
+    "amplifier": 0,
+    "listOfEffects": [
+      "vrm:flighteffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:villager",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:hero_of_the_village"
+    ]
+  },
+  {
+    "entityID": "minecraft:wandering_trader",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:hero_of_the_village"
+    ]
+  },
+  {
+    "entityID": "minecraft:iron_golem",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "minecraft:resistance"
+    ]
+  },
+  {
+    "entityID": "minecraft:vindicator",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "minecraft:hero_of_the_village",
+      "vrm:arrowattackeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:witch",
+    "amplifier": 0,
+    "listOfEffects": [
+      "vrm:milkeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:wither",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "vrm:witherattackeffect",
+      "vrm:flighteffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:wither_skeleton",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "vrm:witherattackeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:wolf",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength"
+    ]
+  },
+  {
+    "entityID": "minecraft:zoglin",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "vrm:milkeffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:zombie",
+    "amplifier": 0,
+    "listOfEffects": [
+      "vrm:hungerresisteffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:zombie_horse",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:speed",
+      "minecraft:jump_boost",
+      "vrm:hungerresisteffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:zombified_piglin",
+    "amplifier": 0,
+    "listOfEffects": [
+      "minecraft:strength",
+      "vrm:hungerresisteffect"
+    ]
+  },
+  {
+    "entityID": "minecraft:zombie_villager",
+    "amplifier": 0,
+    "listOfEffects": [
+      "vrm:hungerresisteffect"
+    ]
+  }
+]

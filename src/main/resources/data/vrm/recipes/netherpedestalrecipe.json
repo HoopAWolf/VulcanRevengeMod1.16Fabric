@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "^^^",
+    "#^#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:red_nether_bricks"
+    },
+    "^": {
+      "item": "minecraft:netherrack"
+    }
+  },
+  "result": {
+    "item": "vrm:pedestal"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "vrm:items/vulcansrevenge"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "type": 1
+      },
+      "model": "vrm:item/vulcansrevengefrost"
+    },
+    {
+      "predicate": {
+        "type": 2
+      },
+      "model": "vrm:item/vulcansrevengeheavy"
+    },
+    {
+      "predicate": {
+        "type": 3
+      },
+      "model": "vrm:item/vulcansrevengewither"
+    }
+  ]
+}

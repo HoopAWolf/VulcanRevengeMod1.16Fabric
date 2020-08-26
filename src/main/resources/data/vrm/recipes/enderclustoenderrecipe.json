@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "vrm:endercluster"
+    }
+  ],
+  "result": {
+    "item": "minecraft:ender_pearl",
+    "count": 8
+  }
+}

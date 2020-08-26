@@ -1,0 +1,22 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "%$%",
+    "$#$",
+    "%$%"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cobblestone"
+    },
+    "$": {
+      "item": "minecraft:diamond_block"
+    },
+    "%": {
+      "item": "vrm:enderdle"
+    }
+  },
+  "result": {
+    "item": "vrm:rune"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "vrm:items/rune"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "type": 1
+      },
+      "model": "vrm:item/deathrune"
+    },
+    {
+      "predicate": {
+        "type": 2
+      },
+      "model": "vrm:item/warrune"
+    },
+    {
+      "predicate": {
+        "type": 3
+      },
+      "model": "vrm:item/famrune"
+    },
+    {
+      "predicate": {
+        "type": 4
+      },
+      "model": "vrm:item/pesrune"
+    }
+  ]
+}

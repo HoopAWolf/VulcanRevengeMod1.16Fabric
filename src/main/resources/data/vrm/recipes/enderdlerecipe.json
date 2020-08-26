@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "vrm:endercluster"
+  },
+  "result": "vrm:enderdle",
+  "experience": 0.65,
+  "cookingtime": 400
+}
