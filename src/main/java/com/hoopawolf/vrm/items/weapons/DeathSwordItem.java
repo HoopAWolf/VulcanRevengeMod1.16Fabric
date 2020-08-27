@@ -12,6 +12,7 @@ import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
@@ -163,7 +164,7 @@ public class DeathSwordItem extends SwordItem
 
         if (target.hasStatusEffect(StatusEffects.GLOWING))
         {
-            //  target.damage(new DamageSource("reaper"), this.getAttackDamage() * 2.0F);
+            target.damage(DamageSource.MAGIC, this.getAttackDamage() * 2.0F);
         }
 
         return true;
@@ -206,7 +207,7 @@ public class DeathSwordItem extends SwordItem
 
                 if (entity != null)
                 {
-                    SpawnParticleMessage spawnParticleMessage = new SpawnParticleMessage(new Vec3d(entity.getX(), entity.getY() + entity.getEyeY() + 0.5D, entity.getZ()), new Vec3d(0.0D, 0.0D, 0.0D), 1, 3, 0.0F);
+                    SpawnParticleMessage spawnParticleMessage = new SpawnParticleMessage(new Vec3d(entity.getX(), entity.getEyeY() + 0.5D, entity.getZ()), new Vec3d(0.0D, 0.0D, 0.0D), 1, 3, 0.0F);
                     PacketByteBuf passedData = new PacketByteBuf(Unpooled.buffer());
                     passedData.writeInt(spawnParticleMessage.getMessageType());
                     spawnParticleMessage.encode(passedData);

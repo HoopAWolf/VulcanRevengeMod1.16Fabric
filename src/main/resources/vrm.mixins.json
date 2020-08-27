@@ -4,14 +4,19 @@
   "package": "com.hoopawolf.vrm.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "DamageMixin",
+    "DeathMixin",
+    "JoinWorldMixin",
+    "JumpMixin",
+    "PlayerTickMixin",
+    "PotionMixin",
+    "SleepingBedMixin",
+    "SleepingMixin"
   ],
-  "client":
-  [
-
-  ],
-  "server":
-  [
-
+  "client": [
+    "KeyboardMixin",
+    "MouseMixin",
+    "OverlayMixin"
   ],
   "injectors": {
     "defaultRequire": 1

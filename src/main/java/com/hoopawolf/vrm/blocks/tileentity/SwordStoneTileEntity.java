@@ -179,7 +179,7 @@ public class SwordStoneTileEntity extends BlockEntity implements Tickable, Block
                             for (int i = 0; i < max; ++i)
                             {
                                 MobEntity entity = (MobEntity) phraseList.get(((int) timer / 150) - 1)[world.random.nextInt(3)].create(world);
-                                entity.updatePositionAndAngles(this.getPos().getX() + (world.random.nextInt(5) - world.random.nextInt(5)),
+                                entity.refreshPositionAndAngles(this.getPos().getX() + (world.random.nextInt(5) - world.random.nextInt(5)),
                                         this.getPos().getY() + 1.0D,
                                         this.getPos().getZ() + (world.random.nextInt(5) - world.random.nextInt(5)), 0.0F, 0.0F);
                                 entity.setTarget(world.getPlayerByUuid(player));

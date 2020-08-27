@@ -162,7 +162,7 @@ public class MessageHandlerOnServer
 
                         if (host.isAlive())
                         {
-                            host.updatePosition(_message.getTeleportPos().getX(), _message.getTeleportPos().getY(), _message.getTeleportPos().getZ());
+                            host.refreshPositionAfterTeleport(_message.getTeleportPos().getX(), _message.getTeleportPos().getY(), _message.getTeleportPos().getZ());
                         }
                     }
                 });

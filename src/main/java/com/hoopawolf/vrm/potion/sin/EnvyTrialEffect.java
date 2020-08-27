@@ -61,7 +61,7 @@ public class EnvyTrialEffect extends StatusEffect
                 if (flag && !flag1)
                 {
                     MobEntity entity = (MobEntity) spawnList[entityLivingBaseIn.world.random.nextInt(spawnList.length)].create(entityLivingBaseIn.world);
-                    entity.updatePositionAndAngles(blockpos$mutable.getX(), blockpos$mutable.getY() + 1, blockpos$mutable.getZ(), 0.0F, 0.0F);
+                    entity.refreshPositionAndAngles(blockpos$mutable.getX(), blockpos$mutable.getY() + 1, blockpos$mutable.getZ(), 0.0F, 0.0F);
                     entity.setTarget(entityLivingBaseIn);
                     entityLivingBaseIn.world.spawnEntity(entity);
                     --rand;

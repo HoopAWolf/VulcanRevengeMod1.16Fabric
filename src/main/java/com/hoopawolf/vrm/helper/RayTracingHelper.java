@@ -70,7 +70,7 @@ public class RayTracingHelper
                 break;
             }
 
-            for (Entity hit : entity.world.getEntities((Class<? extends Entity>) null,
+            for (Entity hit : entity.world.getEntities((Entity) null,
                     new Box(checkPos.getX(), checkPos.getY(), checkPos.getZ(), checkPos.getX() + 1, checkPos.getY() + 1, checkPos.getZ() + 1),
                     e -> e != entity && !(e instanceof SlothPetEntity)))
             {
