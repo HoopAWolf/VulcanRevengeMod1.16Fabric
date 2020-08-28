@@ -8,15 +8,22 @@
     "DeathMixin",
     "JoinWorldMixin",
     "JumpMixin",
-    "PlayerTickMixin",
     "PotionMixin",
-    "SleepingBedMixin",
-    "SleepingMixin"
+    "SwimmingSpeedMixin",
+    "UseItemMixin",
+    "player.PickUpMixin",
+    "player.PlayerTickMixin",
+    "player.RightClickEntityMixin",
+    "player.RightClickItemMixin",
+    "player.SleepingBedMixin",
+    "player.SleepingMixin"
   ],
   "client": [
-    "KeyboardMixin",
-    "MouseMixin",
-    "OverlayMixin"
+    "client.ArmorRendererMixin",
+    "client.ItemEquipAnimationMixin",
+    "client.KeyboardMixin",
+    "client.MouseMixin",
+    "client.OverlayMixin"
   ],
   "injectors": {
     "defaultRequire": 1

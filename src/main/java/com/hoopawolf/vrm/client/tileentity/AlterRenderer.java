@@ -56,7 +56,6 @@ public class AlterRenderer extends BlockEntityRenderer<AlterTileEntity>
         {
             matrixStackIn.push();
             matrixStackIn.translate(0.5D, 1.35D + (tileEntityIn.getTimer() * 0.0125F) * 0.2F, 0.5D);
-            matrixStackIn.scale(0.5F, 0.5F, 0.5F);
             matrixStackIn.multiply(Vector3f.POSITIVE_Y.getDegreesQuaternion(tileEntityIn.getDegree()));
             renderItem(tileEntityIn.getActivationItem(), partialTicks, matrixStackIn, bufferIn, combinedLightIn);
 

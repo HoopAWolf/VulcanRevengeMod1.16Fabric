@@ -1,7 +1,6 @@
 package com.hoopawolf.vrm.entities.ai;
 
 import com.hoopawolf.vrm.util.PotionRegistryHandler;
-import jdk.internal.jline.internal.Nullable;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ai.TargetFinder;
 import net.minecraft.entity.ai.goal.Goal;
@@ -92,7 +91,6 @@ public class FearPanicGoal extends Goal
         return !this.creature.getNavigation().isIdle();
     }
 
-    @Nullable
     protected BlockPos getRandPos(BlockView worldIn, Entity entityIn, int horizontalRange, int verticalRange)
     {
         BlockPos blockpos = entityIn.getBlockPos();

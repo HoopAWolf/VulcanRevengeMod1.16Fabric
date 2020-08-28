@@ -1,4 +1,4 @@
-package com.hoopawolf.vrm.mixin;
+package com.hoopawolf.vrm.mixin.client;
 
 import com.hoopawolf.vrm.VulcanRevengeMod;
 import com.hoopawolf.vrm.helper.EntityHelper;
@@ -11,7 +11,6 @@ import com.hoopawolf.vrm.network.packets.server.TeleportMessage;
 import com.hoopawolf.vrm.util.ArmorRegistryHandler;
 import com.hoopawolf.vrm.util.PotionRegistryHandler;
 import io.netty.buffer.Unpooled;
-import jdk.internal.jline.internal.Nullable;
 import net.fabricmc.fabric.api.network.ClientSidePacketRegistry;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
@@ -36,16 +35,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class MouseMixin
 {
     @Shadow
-    @Nullable
     public ClientPlayerInteractionManager interactionManager;
     @Shadow
-    @Nullable
     public HitResult crosshairTarget;
     @Shadow
-    @Nullable
     public ClientPlayerEntity player;
     @Shadow
-    @Nullable
     public ClientWorld world;
     @Shadow
     protected int attackCooldown;

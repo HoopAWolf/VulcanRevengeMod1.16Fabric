@@ -28,7 +28,7 @@ import java.util.stream.Stream;
 public abstract class PotionMixin
 {
     @Inject(method = "addStatusEffect",
-            at = @At(value = "HEAD"))
+            at = @At(value = "HEAD"), cancellable = true)
     private void applyPotionEvent(StatusEffectInstance effect, CallbackInfoReturnable<Boolean> callbackInfo)
     {
         LivingEntity livingEntity = (LivingEntity) (Object) this;

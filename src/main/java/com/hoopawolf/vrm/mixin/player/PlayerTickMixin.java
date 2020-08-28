@@ -1,4 +1,4 @@
-package com.hoopawolf.vrm.mixin;
+package com.hoopawolf.vrm.mixin.player;
 
 import com.hoopawolf.vrm.util.PotionRegistryHandler;
 import net.minecraft.entity.effect.StatusEffectInstance;

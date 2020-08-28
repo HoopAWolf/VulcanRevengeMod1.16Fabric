@@ -23,7 +23,6 @@ public class PedestalRenderer<T extends PedestalTileEntity> extends BlockEntityR
     {
         matrixStackIn.push();
         matrixStackIn.translate(0.5D, 1.35D, 0.5D);
-        matrixStackIn.scale(0.5F, 0.5F, 0.5F);
         float currentTime = tileEntityIn.getWorld().getTime() + partialTicks;
         matrixStackIn.translate(0D, Math.sin(Math.PI * (currentTime * 0.0125F)) * 0.2F, 0D);
         matrixStackIn.multiply(Vector3f.POSITIVE_Y.getDegreesQuaternion(tileEntityIn.getDegree()));

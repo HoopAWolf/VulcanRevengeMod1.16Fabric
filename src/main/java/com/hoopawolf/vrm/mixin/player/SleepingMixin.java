@@ -1,4 +1,4 @@
-package com.hoopawolf.vrm.mixin;
+package com.hoopawolf.vrm.mixin.player;
 
 import com.hoopawolf.vrm.VulcanRevengeMod;
 import com.hoopawolf.vrm.items.armors.SinsArmorItem;
@@ -33,13 +33,19 @@ public abstract class SleepingMixin
                     {
                         if (VulcanRevengeMod.VRM_CONFIG.itemconfig.slothMaskTurnNight)
                         {
-                            ((ServerWorld) playerEntity.world).setTimeOfDay((i - i % 24000L) - 11000L);
+                            if (!playerEntity.world.isClient)
+                            {
+                                ((ServerWorld) playerEntity.world).setTimeOfDay((i - i % 24000L) - 11000L);
+                            }
                         }
                     } else
                     {
                         if (VulcanRevengeMod.VRM_CONFIG.itemconfig.slothMaskTurnDay)
                         {
-                            ((ServerWorld) playerEntity.world).setTimeOfDay((i - i % 24000L));
+                            if (!playerEntity.world.isClient)
+                            {
+                                ((ServerWorld) playerEntity.world).setTimeOfDay((i - i % 24000L));
+                            }
                         }
                     }
                 }

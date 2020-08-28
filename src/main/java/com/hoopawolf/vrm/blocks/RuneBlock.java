@@ -2,6 +2,7 @@ package com.hoopawolf.vrm.blocks;
 
 import com.hoopawolf.vrm.blocks.tileentity.RuneTileEntity;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.entity.BlockEntity;
@@ -27,6 +28,12 @@ public abstract class RuneBlock extends BlockWithEntity
 
     @Override
     public abstract BlockEntity createBlockEntity(BlockView world);
+
+    @Override
+    public BlockRenderType getRenderType(BlockState state)
+    {
+        return BlockRenderType.MODEL;
+    }
 
     @Override
     public ActionResult onUse(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockHitResult hit)

@@ -188,8 +188,10 @@ public class PesBowItem extends BowItem
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context)
     {
         tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:pes1")).setStyle(Style.EMPTY.withFormatting(Formatting.LIGHT_PURPLE)));
+        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:pes1.1")).setStyle(Style.EMPTY.withFormatting(Formatting.LIGHT_PURPLE)));
         tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:pes2")).setStyle(Style.EMPTY.withItalic(true).withFormatting(Formatting.GRAY)));
         tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:pes3")).setStyle(Style.EMPTY.withItalic(true).withFormatting(Formatting.GRAY)));
+        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:pes3.1")).setStyle(Style.EMPTY.withItalic(true).withFormatting(Formatting.GRAY)));
         tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:pes4")).setStyle(Style.EMPTY.withItalic(true).withFormatting(Formatting.GRAY)));
     }
 }

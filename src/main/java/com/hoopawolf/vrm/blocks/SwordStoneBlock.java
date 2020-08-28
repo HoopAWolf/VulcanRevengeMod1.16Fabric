@@ -1,10 +1,7 @@
 package com.hoopawolf.vrm.blocks;
 
 import com.hoopawolf.vrm.blocks.tileentity.SwordStoneTileEntity;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.BlockWithEntity;
-import net.minecraft.block.Blocks;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -27,6 +24,12 @@ public class SwordStoneBlock extends BlockWithEntity
     public BlockEntity createBlockEntity(BlockView world)
     {
         return new SwordStoneTileEntity();
+    }
+
+    @Override
+    public BlockRenderType getRenderType(BlockState state)
+    {
+        return BlockRenderType.MODEL;
     }
 
     @Override

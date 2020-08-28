@@ -1,11 +1,16 @@
 package com.hoopawolf.vrm.items.armors;
 
+import com.hoopawolf.vrm.VulcanRevengeMod;
 import com.hoopawolf.vrm.entities.SlothPetEntity;
 import com.hoopawolf.vrm.helper.EntityHelper;
+import com.hoopawolf.vrm.network.packets.client.PlaySoundEffectMessage;
 import com.hoopawolf.vrm.util.EntityRegistryHandler;
 import com.hoopawolf.vrm.util.PotionRegistryHandler;
+import io.netty.buffer.Unpooled;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.fabricmc.fabric.api.network.ServerSidePacketRegistry;
+import net.fabricmc.fabric.api.server.PlayerStream;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.entity.Entity;
@@ -18,6 +23,7 @@ import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -27,6 +33,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 public class SinsArmorItem extends ArmorItem
 {
@@ -247,9 +254,13 @@ public class SinsArmorItem extends ArmorItem
 
                                                 if (entity.world.random.nextInt(100) < 50)
                                                 {
-//                                            ((PathAwareEntity) entity).addStatusEffect(new StatusEffectInstance(PotionRegistryHandler.FEAR_EFFECT, 200, 0));
-//                                            PlaySoundEffectMessage playFearSoundMessage = new PlaySoundEffectMessage(entity.getEntityId(), 9, 1.0F, 1.0F);
-//                                            VRMPacketHandler.packetHandler.sendToDimension(entity.world.func_234923_W_(), playFearSoundMessage);
+                                                    ((PathAwareEntity) entity).addStatusEffect(new StatusEffectInstance(PotionRegistryHandler.FEAR_EFFECT, 200, 0));
+                                                    PlaySoundEffectMessage playFearSoundMessage = new PlaySoundEffectMessage(entity.getEntityId(), 9, 1.0F, 1.0F);
+                                                    PacketByteBuf passedData = new PacketByteBuf(Unpooled.buffer());
+                                                    passedData.writeInt(playFearSoundMessage.getMessageType());
+                                                    playFearSoundMessage.encode(passedData);
+                                                    Stream<PlayerEntity> playerInDimension = PlayerStream.world(entity.world);
+                                                    playerInDimension.forEach(player -> ServerSidePacketRegistry.INSTANCE.sendToPlayer(player, VulcanRevengeMod.CLIENT_PACKET_ID, passedData));
                                                 }
                                             }
                                         } else if (entity instanceof ProjectileEntity)

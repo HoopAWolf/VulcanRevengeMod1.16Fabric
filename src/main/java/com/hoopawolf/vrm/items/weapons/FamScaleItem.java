@@ -176,8 +176,12 @@ public class FamScaleItem extends Item
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context)
     {
         tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:fam1")).setStyle(Style.EMPTY.withFormatting(Formatting.LIGHT_PURPLE)));
+        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:fam1.1")).setStyle(Style.EMPTY.withFormatting(Formatting.LIGHT_PURPLE)));
         tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:fam2")).setStyle(Style.EMPTY.withItalic(true).withFormatting(Formatting.GRAY)));
         tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:fam3")).setStyle(Style.EMPTY.withItalic(true).withFormatting(Formatting.GRAY)));
-        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:fam4") + ((getSacrificeCoolDown(stack) > 0) ? " [" + (getSacrificeCoolDown(stack) / 20) + "s]" : "")).setStyle(Style.EMPTY.withItalic(true).withFormatting(((getSacrificeCoolDown(stack) > 0) ? Formatting.DARK_GRAY : Formatting.GRAY))));
+        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:fam3.1")).setStyle(Style.EMPTY.withItalic(true).withFormatting(Formatting.GRAY)));
+        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:fam4")).setStyle(Style.EMPTY.withItalic(true).withFormatting(((getSacrificeCoolDown(stack) > 0) ? Formatting.DARK_GRAY : Formatting.GRAY))));
+        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:fam4.1") + ((getSacrificeCoolDown(stack) > 0) ? " [" + (getSacrificeCoolDown(stack) / 20) + "s]" : "")).setStyle(Style.EMPTY.withItalic(true).withFormatting(((getSacrificeCoolDown(stack) > 0) ? Formatting.DARK_GRAY : Formatting.GRAY))));
+
     }
 }

@@ -215,12 +215,6 @@ public class DeathSwordItem extends SwordItem
                     playerInDimension.forEach(player -> ServerSidePacketRegistry.INSTANCE.sendToPlayer(player, VulcanRevengeMod.CLIENT_PACKET_ID, passedData));
                 }
             }
-        } else
-        {
-            if (entityIn instanceof PlayerEntity)
-            {
-                ((PlayerEntity) entityIn).getItemCooldownManager().set(stack.getItem(), 0); //TODO do it in the constructor? via mixins
-            }
         }
     }
 
@@ -229,8 +223,11 @@ public class DeathSwordItem extends SwordItem
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context)
     {
         tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:death1")).setStyle(Style.EMPTY.withFormatting(Formatting.LIGHT_PURPLE)));
-        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:death2") + ((getMarkCoolDown(stack) > 0) ? " [" + (getMarkCoolDown(stack) / 20) + "s]" : "")).setStyle(Style.EMPTY.withItalic(true).withFormatting(((getMarkCoolDown(stack) > 0) ? Formatting.DARK_GRAY : Formatting.GRAY))));
-        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:death3") + ((getVoodooCoolDown(stack) > 0) ? " [" + (getVoodooCoolDown(stack) / 20) + "s]" : "")).setStyle(Style.EMPTY.withItalic(true).withFormatting(((getVoodooCoolDown(stack) > 0) ? Formatting.DARK_GRAY : Formatting.GRAY))));
-        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:death4") + ((getDeathCoolDown(stack) > 0) ? " [" + (getDeathCoolDown(stack) / 20) + "s]" : "")).setStyle(Style.EMPTY.withItalic(true).withFormatting(((getDeathCoolDown(stack) > 0) ? Formatting.DARK_GRAY : Formatting.GRAY))));
+        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:death2")).setStyle(Style.EMPTY.withItalic(true).withFormatting(((getMarkCoolDown(stack) > 0) ? Formatting.DARK_GRAY : Formatting.GRAY))));
+        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:death2.1") + ((getMarkCoolDown(stack) > 0) ? " [" + (getMarkCoolDown(stack) / 20) + "s]" : "")).setStyle(Style.EMPTY.withItalic(true).withFormatting(((getMarkCoolDown(stack) > 0) ? Formatting.DARK_GRAY : Formatting.GRAY))));
+        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:death3")).setStyle(Style.EMPTY.withItalic(true).withFormatting(((getVoodooCoolDown(stack) > 0) ? Formatting.DARK_GRAY : Formatting.GRAY))));
+        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:death3.1") + ((getVoodooCoolDown(stack) > 0) ? " [" + (getVoodooCoolDown(stack) / 20) + "s]" : "")).setStyle(Style.EMPTY.withItalic(true).withFormatting(((getVoodooCoolDown(stack) > 0) ? Formatting.DARK_GRAY : Formatting.GRAY))));
+        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:death4")).setStyle(Style.EMPTY.withItalic(true).withFormatting(((getDeathCoolDown(stack) > 0) ? Formatting.DARK_GRAY : Formatting.GRAY))));
+        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:death4.1") + ((getDeathCoolDown(stack) > 0) ? " [" + (getDeathCoolDown(stack) / 20) + "s]" : "")).setStyle(Style.EMPTY.withItalic(true).withFormatting(((getDeathCoolDown(stack) > 0) ? Formatting.DARK_GRAY : Formatting.GRAY))));
     }
 }

@@ -33,16 +33,16 @@ import java.util.stream.Stream;
 
 class ItemStore
 {
-    private final Item[] storage = new Item[3];
+    private final String[] storage = new String[3];
 
-    public ItemStore(Item first, Item second, Item third)
+    public ItemStore(String first, String second, String third)
     {
         storage[0] = first;
         storage[1] = second;
         storage[2] = third;
     }
 
-    public Item[] getStorage()
+    public String[] getStorage()
     {
         return storage;
     }
@@ -59,13 +59,13 @@ public class AlterTileEntity extends BlockEntity implements Tickable, BlockEntit
 
     private final ItemStore[] sinItems =
             {
-                    new ItemStore(Items.COOKED_BEEF, Items.COOKED_COD, Items.COOKED_RABBIT),
-                    new ItemStore(Items.SLIME_BALL, Items.MAGMA_CREAM, Items.SLIME_BLOCK),
-                    new ItemStore(Items.WHEAT, Items.WHEAT_SEEDS, Items.CARROT),
-                    new ItemStore(Items.DIAMOND, Items.GOLD_INGOT, Items.EMERALD),
-                    new ItemStore(Items.WHITE_BED, Items.BROWN_BED, Items.LIME_BED),
-                    new ItemStore(Items.DIAMOND_SWORD, Items.SHIELD, Items.DIAMOND_CHESTPLATE),
-                    new ItemStore(Items.BOW, Items.GOLDEN_APPLE, Items.ENDER_EYE)
+                    new ItemStore(VulcanRevengeMod.VRM_CONFIG.itemconfig.gluttonyItemOne, VulcanRevengeMod.VRM_CONFIG.itemconfig.gluttonyItemTwo, VulcanRevengeMod.VRM_CONFIG.itemconfig.gluttonyItemThree),
+                    new ItemStore(VulcanRevengeMod.VRM_CONFIG.itemconfig.envyItemOne, VulcanRevengeMod.VRM_CONFIG.itemconfig.envyItemTwo, VulcanRevengeMod.VRM_CONFIG.itemconfig.envyItemThree),
+                    new ItemStore(VulcanRevengeMod.VRM_CONFIG.itemconfig.lustItemOne, VulcanRevengeMod.VRM_CONFIG.itemconfig.lustItemTwo, VulcanRevengeMod.VRM_CONFIG.itemconfig.lustItemThree),
+                    new ItemStore(VulcanRevengeMod.VRM_CONFIG.itemconfig.greedItemOne, VulcanRevengeMod.VRM_CONFIG.itemconfig.greedItemTwo, VulcanRevengeMod.VRM_CONFIG.itemconfig.greedItemThree),
+                    new ItemStore(VulcanRevengeMod.VRM_CONFIG.itemconfig.slothItemOne, VulcanRevengeMod.VRM_CONFIG.itemconfig.slothItemTwo, VulcanRevengeMod.VRM_CONFIG.itemconfig.slothItemThree),
+                    new ItemStore(VulcanRevengeMod.VRM_CONFIG.itemconfig.wrathItemOne, VulcanRevengeMod.VRM_CONFIG.itemconfig.wrathItemTwo, VulcanRevengeMod.VRM_CONFIG.itemconfig.wrathItemThree),
+                    new ItemStore(VulcanRevengeMod.VRM_CONFIG.itemconfig.prideItemOne, VulcanRevengeMod.VRM_CONFIG.itemconfig.prideItemTwo, VulcanRevengeMod.VRM_CONFIG.itemconfig.prideItemThree)
             };
 
     private final ItemStack[] sinPotion =
@@ -168,9 +168,16 @@ public class AlterTileEntity extends BlockEntity implements Tickable, BlockEntit
                 int type = 0;
                 for (ItemStore store : sinItems)
                 {
-                    for (Item item : store.getStorage())
+                    for (String item : store.getStorage())
                     {
-                        tempItems.remove(item);
+                        for (int i = 0; i < tempItems.size(); ++i)
+                        {
+                            if (tempItems.get(i).getTranslationKey().equals(item))
+                            {
+                                tempItems.remove(i);
+                                break;
+                            }
+                        }
                     }
 
                     if (tempItems.size() == 0)

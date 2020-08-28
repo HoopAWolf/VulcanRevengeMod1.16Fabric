@@ -2,6 +2,7 @@ package com.hoopawolf.vrm.blocks;
 
 import com.hoopawolf.vrm.blocks.tileentity.PedestalTileEntity;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.entity.BlockEntity;
@@ -26,6 +27,12 @@ public class PedestalBlock extends BlockWithEntity
     public BlockEntity createBlockEntity(BlockView world)
     {
         return new PedestalTileEntity();
+    }
+
+    @Override
+    public BlockRenderType getRenderType(BlockState state)
+    {
+        return BlockRenderType.MODEL;
     }
 
     @Override

@@ -1,11 +1,8 @@
 package com.hoopawolf.vrm.util;
 
-import com.hoopawolf.vrm.client.renderer.PesArrowRenderer;
-import com.hoopawolf.vrm.client.renderer.SlothPetRenderer;
 import com.hoopawolf.vrm.entities.SlothPetEntity;
 import com.hoopawolf.vrm.entities.projectiles.PesArrowEntity;
 import com.hoopawolf.vrm.ref.Reference;
-import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
@@ -35,19 +32,6 @@ public class EntityRegistryHandler
                 Registry.ENTITY_TYPE,
                 new Identifier(Reference.MOD_ID, "pesarrow"),
                 FabricEntityTypeBuilder.<PesArrowEntity>create(SpawnGroup.MISC, PesArrowEntity::new).dimensions(EntityDimensions.fixed(0.5F, 0.5F)).build());
-    }
-
-    public static void registerEntityRenderer()
-    {
-        EntityRendererRegistry.INSTANCE.register(SLOTH_PET_ENTITY, ((entityRenderDispatcher, context) ->
-        {
-            return new SlothPetRenderer(entityRenderDispatcher);
-        }));
-
-        EntityRendererRegistry.INSTANCE.register(PES_ARROW_ENTITY, ((entityRenderDispatcher, context) ->
-        {
-            return new PesArrowRenderer(entityRenderDispatcher);
-        }));
     }
 
     public static void registerEntityAttributes()

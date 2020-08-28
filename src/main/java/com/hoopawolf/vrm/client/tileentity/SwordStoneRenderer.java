@@ -53,16 +53,16 @@ public class SwordStoneRenderer extends BlockEntityRenderer<SwordStoneTileEntity
         Random random = new Random();
 
         matrixStackIn.push();
-        matrixStackIn.translate(0.5D, 0.55D, 0.5D);
+        matrixStackIn.translate(0.32D, 0.65D, 0.38D);
         if (tileEntityIn.getDegree() <= 0 && tileEntityIn.isActivated())
         {
             matrixStackIn.push();
             matrixStackIn.translate(random.nextGaussian() * 0.005D, 0.0D, random.nextGaussian() * 0.005D);
         }
-        matrixStackIn.scale(1.0F, 1.0F, 1.0F);
+        matrixStackIn.scale(2.0F, 2.0F, 2.0F);
         matrixStackIn.translate(0D, (tileEntityIn.getTimer() * 0.0125F) * 0.2F, 0D);
         matrixStackIn.multiply(Vector3f.POSITIVE_Y.getDegreesQuaternion(tileEntityIn.getDegree()));
-        matrixStackIn.multiply(Vector3f.NEGATIVE_Z.getDegreesQuaternion(-135));
+        matrixStackIn.multiply(Vector3f.NEGATIVE_Z.getDegreesQuaternion(135));
         renderItem(tileEntityIn.getActivationItem().getStackForRender(), partialTicks, matrixStackIn, bufferIn, combinedLightIn);
 
         if (tileEntityIn.getDegree() <= 0 && tileEntityIn.isActivated())

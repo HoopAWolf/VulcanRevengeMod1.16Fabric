@@ -1,16 +1,14 @@
 package com.hoopawolf.vrm.entities;
 
 import com.hoopawolf.vrm.VulcanRevengeMod;
+import com.hoopawolf.vrm.helper.EntityHelper;
 import com.hoopawolf.vrm.items.armors.SinsArmorItem;
 import com.hoopawolf.vrm.network.packets.client.SpawnParticleMessage;
 import com.hoopawolf.vrm.util.ArmorRegistryHandler;
 import io.netty.buffer.Unpooled;
-import jdk.internal.jline.internal.Nullable;
 import net.fabricmc.fabric.api.network.ServerSidePacketRegistry;
 import net.fabricmc.fabric.api.server.PlayerStream;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.MovementType;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.control.MoveControl;
 import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.entity.ai.goal.LookAtEntityGoal;
@@ -45,7 +43,7 @@ public class SlothPetEntity extends PathAwareEntity
     }
 
     private PlayerEntity owner;
-    @Nullable
+
     private BlockPos boundOrigin;
 
     public SlothPetEntity(EntityType<? extends SlothPetEntity> p_i50190_1_, World p_i50190_2_)
@@ -96,6 +94,11 @@ public class SlothPetEntity extends PathAwareEntity
                 {
                     setTarget(null);
                 }
+            }
+
+            for (Entity entity : EntityHelper.getEntitiesNearby(this, ItemEntity.class, 1))
+            {
+                entity.refreshPositionAndAngles(getOwner().getBlockPos(), entity.yaw, entity.pitch);
             }
         }
     }
@@ -150,13 +153,12 @@ public class SlothPetEntity extends PathAwareEntity
         this.owner = ownerIn;
     }
 
-    @Nullable
     public BlockPos getBoundOrigin()
     {
         return this.boundOrigin;
     }
 
-    public void setBoundOrigin(@Nullable BlockPos boundOriginIn)
+    public void setBoundOrigin(BlockPos boundOriginIn)
     {
         this.boundOrigin = boundOriginIn;
     }

@@ -9,7 +9,6 @@ import com.hoopawolf.vrm.util.ArmorRegistryHandler;
 import com.hoopawolf.vrm.util.ItemBlockRegistryHandler;
 import com.hoopawolf.vrm.util.PotionRegistryHandler;
 import io.netty.buffer.Unpooled;
-import jdk.internal.jline.internal.Nullable;
 import net.fabricmc.fabric.api.network.ServerSidePacketRegistry;
 import net.fabricmc.fabric.api.server.PlayerStream;
 import net.minecraft.entity.LivingEntity;
@@ -35,7 +34,6 @@ public abstract class DamageMixin
     public abstract boolean isDead();
 
     @Shadow
-    @Nullable
     public abstract LivingEntity getAttacker();
 
     @Inject(method = "damage",

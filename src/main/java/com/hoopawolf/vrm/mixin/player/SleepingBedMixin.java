@@ -1,4 +1,4 @@
-package com.hoopawolf.vrm.mixin;
+package com.hoopawolf.vrm.mixin.player;
 
 import com.hoopawolf.vrm.items.armors.SinsArmorItem;
 import com.hoopawolf.vrm.util.ArmorRegistryHandler;

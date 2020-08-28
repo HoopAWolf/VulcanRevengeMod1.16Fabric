@@ -3,6 +3,8 @@ package com.hoopawolf.vrm.util;
 import com.hoopawolf.vrm.client.particles.DeathMarkParticle;
 import com.hoopawolf.vrm.client.particles.PlagueParticle;
 import com.hoopawolf.vrm.ref.Reference;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.minecraft.particle.DefaultParticleType;
@@ -19,7 +21,11 @@ public class ParticleRegistryHandler
     {
         Registry.register(Registry.PARTICLE_TYPE, new Identifier(Reference.MOD_ID, "death"), DEATH_MARK_PARTICLE);
         Registry.register(Registry.PARTICLE_TYPE, new Identifier(Reference.MOD_ID, "plague"), PLAGUE_PARTICLE);
+    }
 
+    @Environment(EnvType.CLIENT)
+    public static void registerFactories()
+    {
         ParticleFactoryRegistry.getInstance().register(DEATH_MARK_PARTICLE, DeathMarkParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(PLAGUE_PARTICLE, PlagueParticle.Factory::new);
     }

@@ -230,8 +230,10 @@ public class WarSwordItem extends SwordItem
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context)
     {
         tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:war1")).setStyle(Style.EMPTY.withFormatting(Formatting.LIGHT_PURPLE)));
-        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:war2") + ((getWarCryCoolDown(stack) > 0) ? " [" + (getWarCryCoolDown(stack) / 20) + "s]" : "")).setStyle(Style.EMPTY.withItalic(true).withFormatting(((getWarCryCoolDown(stack) > 0) ? Formatting.DARK_GRAY : Formatting.GRAY))));
-        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:war3") + ((getRageCoolDown(stack) > 0) ? " [" + (getRageCoolDown(stack) / 20) + "s]" : "")).setStyle(Style.EMPTY.withItalic(true).withFormatting(((getRageCoolDown(stack) > 0) ? Formatting.DARK_GRAY : Formatting.GRAY))));
+        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:war2")).setStyle(Style.EMPTY.withItalic(true).withFormatting(((getWarCryCoolDown(stack) > 0) ? Formatting.DARK_GRAY : Formatting.GRAY))));
+        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:war2.1") + ((getWarCryCoolDown(stack) > 0) ? " [" + (getWarCryCoolDown(stack) / 20) + "s]" : "")).setStyle(Style.EMPTY.withItalic(true).withFormatting(((getWarCryCoolDown(stack) > 0) ? Formatting.DARK_GRAY : Formatting.GRAY))));
+        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:war3")).setStyle(Style.EMPTY.withItalic(true).withFormatting(((getRageCoolDown(stack) > 0) ? Formatting.DARK_GRAY : Formatting.GRAY))));
+        tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:war3.1") + ((getRageCoolDown(stack) > 0) ? " [" + (getRageCoolDown(stack) / 20) + "s]" : "")).setStyle(Style.EMPTY.withItalic(true).withFormatting(((getRageCoolDown(stack) > 0) ? Formatting.DARK_GRAY : Formatting.GRAY))));
         tooltip.add(new TranslatableText(I18n.translate("tooltip.vrm:war4")).setStyle(Style.EMPTY.withItalic(true).withFormatting(Formatting.GRAY)));
     }
 }

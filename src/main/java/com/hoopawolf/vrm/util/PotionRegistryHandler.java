@@ -30,7 +30,7 @@ public class PotionRegistryHandler
     public static final StatusEffect POISON_RESISTANCE_EFFECT = new PoisonResistanceEffect(StatusEffectType.BENEFICIAL, 4122801);
     public static final StatusEffect CLIMB_EFFECT = new ClimbEffect(StatusEffectType.BENEFICIAL, 3442801);
     public static final StatusEffect EGG_ATTACK_EFFECT = new EggAttackEffect(StatusEffectType.BENEFICIAL, 3652801);
-    // public static final StatusEffect SWIMMING_SPEED_EFFECT = new PotionEffectBase(StatusEffectType.BENEFICIAL, 1112801).addAttributesModifier(ForgeMod.SWIM_SPEED.get(), "9898b50a-d0b6-11ea-87d0-0242ac130003", 1.5F, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
+    public static final StatusEffect SWIMMING_SPEED_EFFECT = new PotionEffectBase(StatusEffectType.BENEFICIAL, 1112801);
     public static final StatusEffect MILK_EFFECT = new PotionEffectBase(StatusEffectType.BENEFICIAL, 4212801);
     public static final StatusEffect RAGE_EFFECT = new PotionEffectBase(StatusEffectType.BENEFICIAL, 4123801);
     public static final StatusEffect EXPLOSIVE_RESISTANCE_EFFECT = new PotionEffectBase(StatusEffectType.BENEFICIAL, 4451801);
@@ -75,7 +75,7 @@ public class PotionRegistryHandler
         Registry.register(Registry.STATUS_EFFECT, new Identifier(Reference.MOD_ID, "poisonresisteffect"), POISON_RESISTANCE_EFFECT);
         Registry.register(Registry.STATUS_EFFECT, new Identifier(Reference.MOD_ID, "climbeffect"), CLIMB_EFFECT);
         Registry.register(Registry.STATUS_EFFECT, new Identifier(Reference.MOD_ID, "eggattackeffect"), EGG_ATTACK_EFFECT);
-        // Registry.register(Registry.STATUS_EFFECT, new Identifier(Reference.MOD_ID, "swimmingspeedeffect"), SWIMMING_SPEED_EFFECT);
+        Registry.register(Registry.STATUS_EFFECT, new Identifier(Reference.MOD_ID, "swimmingspeedeffect"), SWIMMING_SPEED_EFFECT);
         Registry.register(Registry.STATUS_EFFECT, new Identifier(Reference.MOD_ID, "milkeffect"), MILK_EFFECT);
         Registry.register(Registry.STATUS_EFFECT, new Identifier(Reference.MOD_ID, "rageeffect"), RAGE_EFFECT);
         Registry.register(Registry.STATUS_EFFECT, new Identifier(Reference.MOD_ID, "explosiveresisteffect"), EXPLOSIVE_RESISTANCE_EFFECT);

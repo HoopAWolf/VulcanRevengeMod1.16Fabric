@@ -3,6 +3,8 @@ package com.hoopawolf.vrm.util;
 import com.hoopawolf.vrm.blocks.tileentity.*;
 import com.hoopawolf.vrm.client.tileentity.*;
 import com.hoopawolf.vrm.ref.Reference;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.BlockEntityRendererRegistry;
 import net.minecraft.block.entity.BlockEntityType;
@@ -38,6 +40,7 @@ public class TileEntityRegistryHandler
         MAGMA_RUNE_TILE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(Reference.MOD_ID, "magmarune"), BlockEntityType.Builder.create(MagmaRuneTileEntity::new, ItemBlockRegistryHandler.MAGMA_RUNE_BLOCK).build(null));
     }
 
+    @Environment(EnvType.CLIENT)
     public static void registerTileEntityRenderer()
     {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutoutMipped(), ItemBlockRegistryHandler.SWORD_STONE_BLOCK, ItemBlockRegistryHandler.PEDESTAL_BLOCK, ItemBlockRegistryHandler.ALTER_BLOCK);

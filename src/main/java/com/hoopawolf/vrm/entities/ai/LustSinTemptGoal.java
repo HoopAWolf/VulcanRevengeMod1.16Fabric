@@ -73,7 +73,7 @@ public class LustSinTemptGoal extends Goal
         this.pitch = this.closestPlayer.pitch;
         this.yaw = this.closestPlayer.yaw;
 
-        return this.shouldContinue();
+        return this.canStart();
     }
 
     @Override

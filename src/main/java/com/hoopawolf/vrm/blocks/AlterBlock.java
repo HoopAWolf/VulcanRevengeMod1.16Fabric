@@ -2,6 +2,7 @@ package com.hoopawolf.vrm.blocks;
 
 import com.hoopawolf.vrm.blocks.tileentity.AlterTileEntity;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.entity.BlockEntity;
@@ -27,6 +28,12 @@ public class AlterBlock extends BlockWithEntity
     public BlockEntity createBlockEntity(BlockView world)
     {
         return new AlterTileEntity();
+    }
+
+    @Override
+    public BlockRenderType getRenderType(BlockState state)
+    {
+        return BlockRenderType.MODEL;
     }
 
     @Override

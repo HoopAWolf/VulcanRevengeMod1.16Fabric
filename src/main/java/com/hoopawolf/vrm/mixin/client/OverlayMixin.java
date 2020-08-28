@@ -1,4 +1,4 @@
-package com.hoopawolf.vrm.mixin;
+package com.hoopawolf.vrm.mixin.client;
 
 import com.hoopawolf.vrm.VulcanRevengeMod;
 import com.hoopawolf.vrm.access.VariableAccess;
