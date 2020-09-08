@@ -23,7 +23,8 @@
     "client.ItemEquipAnimationMixin",
     "client.KeyboardMixin",
     "client.MouseMixin",
-    "client.OverlayMixin"
+    "client.OverlayMixin",
+    "client.ItemRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
